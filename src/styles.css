@@ -74,21 +74,32 @@
 }
 
 :root {
-  --radius: 0.625rem;
+  --radius: 0.75rem;
+  --marine: oklch(0.24 0.055 258);
+  --marine-soft: oklch(0.32 0.058 258);
+  --marine-foreground: oklch(0.98 0.005 250);
+  --gold: oklch(0.78 0.113 86);
+  --gold-soft: oklch(0.88 0.075 88);
+  --gold-foreground: oklch(0.24 0.055 258);
+  --sand: oklch(0.975 0.006 90);
+  --gradient-marine: linear-gradient(140deg, oklch(0.2 0.05 258), oklch(0.32 0.06 262));
+  --gradient-gold: linear-gradient(135deg, oklch(0.86 0.09 90), oklch(0.74 0.12 82));
+  --shadow-gold: 0 10px 30px -12px color-mix(in oklab, var(--gold) 55%, transparent);
+  --shadow-elegant: 0 24px 60px -30px color-mix(in oklab, var(--marine) 55%, transparent);
   --background: oklch(1 0 0);
   --foreground: oklch(0.129 0.042 264.695);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.24 0.055 258);
+  --primary-foreground: oklch(0.98 0.005 250);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --accent: oklch(0.96 0.03 90);
+  --accent-foreground: oklch(0.24 0.055 258);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
   --border: oklch(0.929 0.013 255.508);
@@ -152,5 +163,44 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+  }
+}
+
+@utility bg-gradient-marine {
+  background-image: var(--gradient-marine);
+}
+
+@utility bg-gradient-gold {
+  background-image: var(--gradient-gold);
+}
+
+@utility shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+
+@utility shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 80rem;
+  padding-inline: 1.25rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
   }
 }
