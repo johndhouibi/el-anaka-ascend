@@ -27,28 +27,28 @@ const POSTS = [
     tag: "Admissions",
     title: "Autumn intake registrations are open",
     body: "Seats for the culinary, aesthetics and fashion departments are now open for the autumn session. Places per workshop are limited.",
-    image: DEPARTMENTS[0].image,
+    image: DEPARTMENTS[0]!.image,
   },
   {
     date: "28 Aug 2026",
     tag: "Competition",
     title: "Our pastry students win the regional Sfax trophy",
     body: "Three second-year students took first place in the regional pastry competition with a modern take on Tunisian classics.",
-    image: DEPARTMENTS[0].image,
+    image: DEPARTMENTS[0]!.image,
   },
   {
     date: "05 Aug 2026",
     tag: "Open day",
     title: "Open day: visit our salon and ateliers",
     body: "Meet the instructors, tour the training salon and atelier, and get personalised advice on choosing your program.",
-    image: DEPARTMENTS[1].image,
+    image: DEPARTMENTS[1]!.image,
   },
   {
     date: "19 Jul 2026",
     tag: "Program",
     title: "New rapid training format for working adults",
     body: "Evening and weekend sessions now available for pattern cutting and sewing, designed for career changers.",
-    image: DEPARTMENTS[2].image,
+    image: DEPARTMENTS[2]!.image,
   },
 ];
 
